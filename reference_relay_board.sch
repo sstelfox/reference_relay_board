@@ -1,0 +1,1476 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Reverse Engineered Relay Board"
+Date "2018-12-14"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x10 J9
+U 1 1 5C146F9A
+P 8700 6000
+F 0 "J9" V 8825 5946 50  0000 C CNN
+F 1 "Conn_01x10" V 8916 5946 50  0000 C CNN
+F 2 "" H 8700 6000 50  0001 C CNN
+F 3 "~" H 8700 6000 50  0001 C CNN
+	1    8700 6000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8200 5650 8200 5800
+$Comp
+L Device:LED D4
+U 1 1 5C14D6C8
+P 3350 1350
+F 0 "D4" H 3343 1095 50  0000 C CNN
+F 1 "LED" H 3343 1186 50  0000 C CNN
+F 2 "" H 3350 1350 50  0001 C CNN
+F 3 "~" H 3350 1350 50  0001 C CNN
+	1    3350 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_SolidState:TLP3542 U1
+U 1 1 5C14F81E
+P 2950 1800
+F 0 "U1" V 2904 1620 50  0000 R CNN
+F 1 "OPTO_ISOLATOR" V 2995 1620 50  0000 R CNN
+F 2 "Package_DIP:DIP-5-6_W7.62mm" H 2950 1500 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=1284&prodName=TLP3542" H 2950 1800 50  0001 C CNN
+	1    2950 1800
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K1
+U 1 1 5C152E77
+P 1850 1750
+F 0 "K1" H 1950 1650 50  0000 R CNN
+F 1 "5VDC_Relay_1" H 2150 1250 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 2300 1700 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 1850 1750 50  0001 C CNN
+	1    1850 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5C155A09
+P 2850 1200
+F 0 "R4" H 2920 1246 50  0000 L CNN
+F 1 "1k" H 2920 1155 50  0000 L CNN
+F 2 "" V 2780 1200 50  0001 C CNN
+F 3 "~" H 2850 1200 50  0001 C CNN
+	1    2850 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 5C158BFD
+P 2350 1750
+F 0 "D1" V 2304 1829 50  0000 L CNN
+F 1 "D" V 2395 1829 50  0000 L CNN
+F 2 "" H 2350 1750 50  0001 C CNN
+F 3 "~" H 2350 1750 50  0001 C CNN
+	1    2350 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C15A649
+P 2800 2500
+F 0 "R1" V 2593 2500 50  0000 C CNN
+F 1 "510" V 2684 2500 50  0000 C CNN
+F 2 "" V 2730 2500 50  0001 C CNN
+F 3 "~" H 2800 2500 50  0001 C CNN
+	1    2800 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q1
+U 1 1 5C15AE6E
+P 2300 2500
+F 0 "Q1" H 2491 2500 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 2491 2455 50  0001 L CNN
+F 2 "" H 2500 2600 50  0001 C CNN
+F 3 "~" H 2300 2500 50  0001 C CNN
+	1    2300 2500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2200 2050 2050
+Text Label 3850 1350 2    50   ~ 0
+~CTRL1
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5C15EA2D
+P 850 1750
+F 0 "J1" H 850 2100 50  0000 C CNN
+F 1 "RELAY_1" H 850 2000 50  0000 C CNN
+F 2 "" H 850 1750 50  0001 C CNN
+F 3 "~" H 850 1750 50  0001 C CNN
+	1    850  1750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1300 1650 1450
+Wire Wire Line
+	1550 2150 1550 2050
+Wire Wire Line
+	1750 2250 1750 2050
+$Comp
+L Connector_Generic:Conn_01x03 J10
+U 1 1 5C166E3E
+P 9900 5300
+F 0 "J10" V 9864 5112 50  0000 R CNN
+F 1 "Power Select" V 9773 5112 50  0000 R CNN
+F 2 "" H 9900 5300 50  0001 C CNN
+F 3 "~" H 9900 5300 50  0001 C CNN
+	1    9900 5300
+	0    -1   -1   0   
+$EndComp
+Text Label 9550 5650 2    50   ~ 0
+EXT_PWR+
+Wire Wire Line
+	9550 5650 9100 5650
+Wire Wire Line
+	9100 5650 9100 5800
+Text Label 7750 5650 0    50   ~ 0
+EXT_PWR-
+Wire Wire Line
+	7750 5650 8200 5650
+Text Label 8300 5250 3    50   ~ 0
+~CTRL1
+Wire Wire Line
+	8300 5250 8300 5800
+Text Label 10400 5800 2    50   ~ 0
+EXT_PWR+
+Wire Wire Line
+	9900 5800 9900 5500
+Text Label 10400 5650 2    50   ~ 0
+JD-VCC
+Wire Wire Line
+	10000 5650 10000 5500
+Text Label 10400 5950 2    50   ~ 0
+EXT_PWR-
+Wire Wire Line
+	10400 5950 9800 5950
+Wire Wire Line
+	9800 5950 9800 5500
+Text Label 2050 1100 0    50   ~ 0
+JD-VCC
+Text Label 2650 2800 2    50   ~ 0
+EXT_PWR-
+Wire Wire Line
+	2650 2800 2200 2800
+Wire Wire Line
+	1350 1300 1350 1750
+Wire Wire Line
+	1350 1300 1650 1300
+Wire Wire Line
+	1250 1650 1250 2150
+Wire Wire Line
+	1250 2150 1550 2150
+Wire Wire Line
+	1150 2250 1150 1850
+Wire Wire Line
+	1150 2250 1750 2250
+Wire Wire Line
+	1150 1850 1050 1850
+Wire Wire Line
+	1050 1750 1350 1750
+Wire Wire Line
+	1250 1650 1050 1650
+Wire Wire Line
+	2050 1450 2050 1350
+Wire Wire Line
+	2350 1600 2350 1350
+Wire Wire Line
+	2350 1900 2350 2200
+Wire Wire Line
+	2050 2200 2200 2200
+Wire Wire Line
+	2200 2300 2200 2200
+Connection ~ 2200 2200
+Wire Wire Line
+	2200 2200 2350 2200
+Wire Wire Line
+	2200 2700 2200 2800
+Wire Wire Line
+	2650 2500 2500 2500
+Wire Wire Line
+	2950 2500 3050 2500
+Wire Wire Line
+	3050 2500 3050 2100
+Wire Wire Line
+	2850 2100 2850 2200
+Wire Wire Line
+	2850 2200 2650 2200
+Wire Wire Line
+	2650 2200 2650 1350
+Wire Wire Line
+	2850 900  2850 1050
+Wire Wire Line
+	2850 1350 2850 1500
+Wire Wire Line
+	3850 1350 3500 1350
+Wire Wire Line
+	3200 1350 3050 1350
+Wire Wire Line
+	3050 1350 3050 1500
+Wire Wire Line
+	2650 1350 2350 1350
+Connection ~ 2350 1350
+Wire Wire Line
+	2050 1350 2350 1350
+Wire Wire Line
+	2050 1100 2350 1100
+Wire Wire Line
+	2350 1100 2350 1350
+Text Label 2450 900  0    50   ~ 0
+EXT_PWR+
+Wire Wire Line
+	2450 900  2850 900 
+$Comp
+L Device:LED D5
+U 1 1 5C1A1FBB
+P 3350 3500
+F 0 "D5" H 3343 3245 50  0000 C CNN
+F 1 "LED" H 3343 3336 50  0000 C CNN
+F 2 "" H 3350 3500 50  0001 C CNN
+F 3 "~" H 3350 3500 50  0001 C CNN
+	1    3350 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_SolidState:TLP3542 U2
+U 1 1 5C1A1FC1
+P 2950 3950
+F 0 "U2" V 2904 3770 50  0000 R CNN
+F 1 "OPTO_ISOLATOR" V 2995 3770 50  0000 R CNN
+F 2 "Package_DIP:DIP-5-6_W7.62mm" H 2950 3650 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=1284&prodName=TLP3542" H 2950 3950 50  0001 C CNN
+	1    2950 3950
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K2
+U 1 1 5C1A1FC7
+P 1850 3900
+F 0 "K2" H 1950 3800 50  0000 R CNN
+F 1 "5VDC_Relay_2" H 2150 3400 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 2300 3850 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 1850 3900 50  0001 C CNN
+	1    1850 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5C1A1FCD
+P 2850 3350
+F 0 "R5" H 2920 3396 50  0000 L CNN
+F 1 "1k" H 2920 3305 50  0000 L CNN
+F 2 "" V 2780 3350 50  0001 C CNN
+F 3 "~" H 2850 3350 50  0001 C CNN
+	1    2850 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 5C1A1FD3
+P 2350 3900
+F 0 "D2" V 2304 3979 50  0000 L CNN
+F 1 "D" V 2395 3979 50  0000 L CNN
+F 2 "" H 2350 3900 50  0001 C CNN
+F 3 "~" H 2350 3900 50  0001 C CNN
+	1    2350 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5C1A1FD9
+P 2800 4650
+F 0 "R2" V 2593 4650 50  0000 C CNN
+F 1 "510" V 2684 4650 50  0000 C CNN
+F 2 "" V 2730 4650 50  0001 C CNN
+F 3 "~" H 2800 4650 50  0001 C CNN
+	1    2800 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q2
+U 1 1 5C1A1FDF
+P 2300 4650
+F 0 "Q2" H 2491 4650 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 2491 4605 50  0001 L CNN
+F 2 "" H 2500 4750 50  0001 C CNN
+F 3 "~" H 2300 4650 50  0001 C CNN
+	1    2300 4650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 4350 2050 4200
+Text Label 3850 3500 2    50   ~ 0
+~CTRL2
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5C1A1FE7
+P 850 3900
+F 0 "J2" H 850 4250 50  0000 C CNN
+F 1 "RELAY_2" H 850 4150 50  0000 C CNN
+F 2 "" H 850 3900 50  0001 C CNN
+F 3 "~" H 850 3900 50  0001 C CNN
+	1    850  3900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 3450 1650 3600
+Wire Wire Line
+	1550 4300 1550 4200
+Wire Wire Line
+	1750 4400 1750 4200
+Text Label 2050 3250 0    50   ~ 0
+JD-VCC
+Text Label 2650 4950 2    50   ~ 0
+EXT_PWR-
+Wire Wire Line
+	2650 4950 2200 4950
+Wire Wire Line
+	1350 3450 1350 3900
+Wire Wire Line
+	1350 3450 1650 3450
+Wire Wire Line
+	1250 3800 1250 4300
+Wire Wire Line
+	1250 4300 1550 4300
+Wire Wire Line
+	1150 4400 1150 4000
+Wire Wire Line
+	1150 4400 1750 4400
+Wire Wire Line
+	1150 4000 1050 4000
+Wire Wire Line
+	1050 3900 1350 3900
+Wire Wire Line
+	1250 3800 1050 3800
+Wire Wire Line
+	2050 3600 2050 3500
+Wire Wire Line
+	2350 3750 2350 3500
+Wire Wire Line
+	2350 4050 2350 4350
+Wire Wire Line
+	2050 4350 2200 4350
+Wire Wire Line
+	2200 4450 2200 4350
+Connection ~ 2200 4350
+Wire Wire Line
+	2200 4350 2350 4350
+Wire Wire Line
+	2200 4850 2200 4950
+Wire Wire Line
+	2650 4650 2500 4650
+Wire Wire Line
+	2950 4650 3050 4650
+Wire Wire Line
+	3050 4650 3050 4250
+Wire Wire Line
+	2850 4250 2850 4350
+Wire Wire Line
+	2850 4350 2650 4350
+Wire Wire Line
+	2650 4350 2650 3500
+Wire Wire Line
+	2850 3050 2850 3200
+Wire Wire Line
+	2850 3500 2850 3650
+Wire Wire Line
+	3850 3500 3500 3500
+Wire Wire Line
+	3200 3500 3050 3500
+Wire Wire Line
+	3050 3500 3050 3650
+Wire Wire Line
+	2650 3500 2350 3500
+Connection ~ 2350 3500
+Wire Wire Line
+	2050 3500 2350 3500
+Wire Wire Line
+	2050 3250 2350 3250
+Wire Wire Line
+	2350 3250 2350 3500
+Text Label 2450 3050 0    50   ~ 0
+EXT_PWR+
+Wire Wire Line
+	2450 3050 2850 3050
+$Comp
+L Device:LED D6
+U 1 1 5C1AAFE0
+P 3350 5650
+F 0 "D6" H 3343 5395 50  0000 C CNN
+F 1 "LED" H 3343 5486 50  0000 C CNN
+F 2 "" H 3350 5650 50  0001 C CNN
+F 3 "~" H 3350 5650 50  0001 C CNN
+	1    3350 5650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_SolidState:TLP3542 U3
+U 1 1 5C1AAFE6
+P 2950 6100
+F 0 "U3" V 2904 5920 50  0000 R CNN
+F 1 "OPTO_ISOLATOR" V 2995 5920 50  0000 R CNN
+F 2 "Package_DIP:DIP-5-6_W7.62mm" H 2950 5800 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=1284&prodName=TLP3542" H 2950 6100 50  0001 C CNN
+	1    2950 6100
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K3
+U 1 1 5C1AAFEC
+P 1850 6050
+F 0 "K3" H 1950 5950 50  0000 R CNN
+F 1 "5VDC_Relay_3" H 2150 5550 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 2300 6000 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 1850 6050 50  0001 C CNN
+	1    1850 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5C1AAFF2
+P 2850 5500
+F 0 "R6" H 2920 5546 50  0000 L CNN
+F 1 "1k" H 2920 5455 50  0000 L CNN
+F 2 "" V 2780 5500 50  0001 C CNN
+F 3 "~" H 2850 5500 50  0001 C CNN
+	1    2850 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 5C1AAFF8
+P 2350 6050
+F 0 "D3" V 2304 6129 50  0000 L CNN
+F 1 "D" V 2395 6129 50  0000 L CNN
+F 2 "" H 2350 6050 50  0001 C CNN
+F 3 "~" H 2350 6050 50  0001 C CNN
+	1    2350 6050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5C1AAFFE
+P 2800 6800
+F 0 "R3" V 2593 6800 50  0000 C CNN
+F 1 "510" V 2684 6800 50  0000 C CNN
+F 2 "" V 2730 6800 50  0001 C CNN
+F 3 "~" H 2800 6800 50  0001 C CNN
+	1    2800 6800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q3
+U 1 1 5C1AB004
+P 2300 6800
+F 0 "Q3" H 2491 6800 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 2491 6755 50  0001 L CNN
+F 2 "" H 2500 6900 50  0001 C CNN
+F 3 "~" H 2300 6800 50  0001 C CNN
+	1    2300 6800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 6500 2050 6350
+Text Label 3850 5650 2    50   ~ 0
+~CTRL3
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 5C1AB00C
+P 850 6050
+F 0 "J3" H 850 6400 50  0000 C CNN
+F 1 "RELAY_3" H 850 6300 50  0000 C CNN
+F 2 "" H 850 6050 50  0001 C CNN
+F 3 "~" H 850 6050 50  0001 C CNN
+	1    850  6050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 5600 1650 5750
+Wire Wire Line
+	1550 6450 1550 6350
+Wire Wire Line
+	1750 6550 1750 6350
+Text Label 2050 5400 0    50   ~ 0
+JD-VCC
+Text Label 2650 7100 2    50   ~ 0
+EXT_PWR-
+Wire Wire Line
+	2650 7100 2200 7100
+Wire Wire Line
+	1350 5600 1350 6050
+Wire Wire Line
+	1350 5600 1650 5600
+Wire Wire Line
+	1250 5950 1250 6450
+Wire Wire Line
+	1250 6450 1550 6450
+Wire Wire Line
+	1150 6550 1150 6150
+Wire Wire Line
+	1150 6550 1750 6550
+Wire Wire Line
+	1150 6150 1050 6150
+Wire Wire Line
+	1050 6050 1350 6050
+Wire Wire Line
+	1250 5950 1050 5950
+Wire Wire Line
+	2050 5750 2050 5650
+Wire Wire Line
+	2350 5900 2350 5650
+Wire Wire Line
+	2350 6200 2350 6500
+Wire Wire Line
+	2050 6500 2200 6500
+Wire Wire Line
+	2200 6600 2200 6500
+Connection ~ 2200 6500
+Wire Wire Line
+	2200 6500 2350 6500
+Wire Wire Line
+	2200 7000 2200 7100
+Wire Wire Line
+	2650 6800 2500 6800
+Wire Wire Line
+	2950 6800 3050 6800
+Wire Wire Line
+	3050 6800 3050 6400
+Wire Wire Line
+	2850 6400 2850 6500
+Wire Wire Line
+	2850 6500 2650 6500
+Wire Wire Line
+	2650 6500 2650 5650
+Wire Wire Line
+	2850 5200 2850 5350
+Wire Wire Line
+	2850 5650 2850 5800
+Wire Wire Line
+	3850 5650 3500 5650
+Wire Wire Line
+	3200 5650 3050 5650
+Wire Wire Line
+	3050 5650 3050 5800
+Wire Wire Line
+	2650 5650 2350 5650
+Connection ~ 2350 5650
+Wire Wire Line
+	2050 5650 2350 5650
+Wire Wire Line
+	2050 5400 2350 5400
+Wire Wire Line
+	2350 5400 2350 5650
+Text Label 2450 5200 0    50   ~ 0
+EXT_PWR+
+Wire Wire Line
+	2450 5200 2850 5200
+$Comp
+L Device:LED D10
+U 1 1 5C23094B
+P 6750 1350
+F 0 "D10" H 6743 1095 50  0000 C CNN
+F 1 "LED" H 6743 1186 50  0000 C CNN
+F 2 "" H 6750 1350 50  0001 C CNN
+F 3 "~" H 6750 1350 50  0001 C CNN
+	1    6750 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_SolidState:TLP3542 U4
+U 1 1 5C230951
+P 6350 1800
+F 0 "U4" V 6304 1620 50  0000 R CNN
+F 1 "OPTO_ISOLATOR" V 6395 1620 50  0000 R CNN
+F 2 "Package_DIP:DIP-5-6_W7.62mm" H 6350 1500 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=1284&prodName=TLP3542" H 6350 1800 50  0001 C CNN
+	1    6350 1800
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K4
+U 1 1 5C230957
+P 5250 1750
+F 0 "K4" H 5350 1650 50  0000 R CNN
+F 1 "5VDC_Relay_4" H 5550 1250 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 5700 1700 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 5250 1750 50  0001 C CNN
+	1    5250 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5C23095D
+P 6250 1200
+F 0 "R10" H 6320 1246 50  0000 L CNN
+F 1 "1k" H 6320 1155 50  0000 L CNN
+F 2 "" V 6180 1200 50  0001 C CNN
+F 3 "~" H 6250 1200 50  0001 C CNN
+	1    6250 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D7
+U 1 1 5C230963
+P 5750 1750
+F 0 "D7" V 5704 1829 50  0000 L CNN
+F 1 "D" V 5795 1829 50  0000 L CNN
+F 2 "" H 5750 1750 50  0001 C CNN
+F 3 "~" H 5750 1750 50  0001 C CNN
+	1    5750 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5C230969
+P 6200 2500
+F 0 "R7" V 5993 2500 50  0000 C CNN
+F 1 "510" V 6084 2500 50  0000 C CNN
+F 2 "" V 6130 2500 50  0001 C CNN
+F 3 "~" H 6200 2500 50  0001 C CNN
+	1    6200 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q4
+U 1 1 5C23096F
+P 5700 2500
+F 0 "Q4" H 5891 2500 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 5891 2455 50  0001 L CNN
+F 2 "" H 5900 2600 50  0001 C CNN
+F 3 "~" H 5700 2500 50  0001 C CNN
+	1    5700 2500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2200 5450 2050
+Text Label 7250 1350 2    50   ~ 0
+~CTRL4
+$Comp
+L Connector_Generic:Conn_01x03 J4
+U 1 1 5C230977
+P 4250 1750
+F 0 "J4" H 4250 2100 50  0000 C CNN
+F 1 "RELAY_4" H 4250 2000 50  0000 C CNN
+F 2 "" H 4250 1750 50  0001 C CNN
+F 3 "~" H 4250 1750 50  0001 C CNN
+	1    4250 1750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1300 5050 1450
+Wire Wire Line
+	4950 2150 4950 2050
+Wire Wire Line
+	5150 2250 5150 2050
+Text Label 5450 1100 0    50   ~ 0
+JD-VCC
+Text Label 6050 2800 2    50   ~ 0
+EXT_PWR-
+Wire Wire Line
+	6050 2800 5600 2800
+Wire Wire Line
+	4750 1300 4750 1750
+Wire Wire Line
+	4750 1300 5050 1300
+Wire Wire Line
+	4650 1650 4650 2150
+Wire Wire Line
+	4650 2150 4950 2150
+Wire Wire Line
+	4550 2250 4550 1850
+Wire Wire Line
+	4550 2250 5150 2250
+Wire Wire Line
+	4550 1850 4450 1850
+Wire Wire Line
+	4450 1750 4750 1750
+Wire Wire Line
+	4650 1650 4450 1650
+Wire Wire Line
+	5450 1450 5450 1350
+Wire Wire Line
+	5750 1600 5750 1350
+Wire Wire Line
+	5750 1900 5750 2200
+Wire Wire Line
+	5450 2200 5600 2200
+Wire Wire Line
+	5600 2300 5600 2200
+Connection ~ 5600 2200
+Wire Wire Line
+	5600 2200 5750 2200
+Wire Wire Line
+	5600 2700 5600 2800
+Wire Wire Line
+	6050 2500 5900 2500
+Wire Wire Line
+	6350 2500 6450 2500
+Wire Wire Line
+	6450 2500 6450 2100
+Wire Wire Line
+	6250 2100 6250 2200
+Wire Wire Line
+	6250 2200 6050 2200
+Wire Wire Line
+	6050 2200 6050 1350
+Wire Wire Line
+	6250 900  6250 1050
+Wire Wire Line
+	6250 1350 6250 1500
+Wire Wire Line
+	7250 1350 6900 1350
+Wire Wire Line
+	6600 1350 6450 1350
+Wire Wire Line
+	6450 1350 6450 1500
+Wire Wire Line
+	6050 1350 5750 1350
+Connection ~ 5750 1350
+Wire Wire Line
+	5450 1350 5750 1350
+Wire Wire Line
+	5450 1100 5750 1100
+Wire Wire Line
+	5750 1100 5750 1350
+Text Label 5850 900  0    50   ~ 0
+EXT_PWR+
+Wire Wire Line
+	5850 900  6250 900 
+$Comp
+L Device:LED D11
+U 1 1 5C2309A6
+P 6750 3500
+F 0 "D11" H 6743 3245 50  0000 C CNN
+F 1 "LED" H 6743 3336 50  0000 C CNN
+F 2 "" H 6750 3500 50  0001 C CNN
+F 3 "~" H 6750 3500 50  0001 C CNN
+	1    6750 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_SolidState:TLP3542 U5
+U 1 1 5C2309AC
+P 6350 3950
+F 0 "U5" V 6304 3770 50  0000 R CNN
+F 1 "OPTO_ISOLATOR" V 6395 3770 50  0000 R CNN
+F 2 "Package_DIP:DIP-5-6_W7.62mm" H 6350 3650 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=1284&prodName=TLP3542" H 6350 3950 50  0001 C CNN
+	1    6350 3950
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K5
+U 1 1 5C2309B2
+P 5250 3900
+F 0 "K5" H 5350 3800 50  0000 R CNN
+F 1 "5VDC_Relay_5" H 5550 3400 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 5700 3850 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 5250 3900 50  0001 C CNN
+	1    5250 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5C2309B8
+P 6250 3350
+F 0 "R11" H 6320 3396 50  0000 L CNN
+F 1 "1k" H 6320 3305 50  0000 L CNN
+F 2 "" V 6180 3350 50  0001 C CNN
+F 3 "~" H 6250 3350 50  0001 C CNN
+	1    6250 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D8
+U 1 1 5C2309BE
+P 5750 3900
+F 0 "D8" V 5704 3979 50  0000 L CNN
+F 1 "D" V 5795 3979 50  0000 L CNN
+F 2 "" H 5750 3900 50  0001 C CNN
+F 3 "~" H 5750 3900 50  0001 C CNN
+	1    5750 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5C2309C4
+P 6200 4650
+F 0 "R8" V 5993 4650 50  0000 C CNN
+F 1 "510" V 6084 4650 50  0000 C CNN
+F 2 "" V 6130 4650 50  0001 C CNN
+F 3 "~" H 6200 4650 50  0001 C CNN
+	1    6200 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q5
+U 1 1 5C2309CA
+P 5700 4650
+F 0 "Q5" H 5891 4650 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 5891 4605 50  0001 L CNN
+F 2 "" H 5900 4750 50  0001 C CNN
+F 3 "~" H 5700 4650 50  0001 C CNN
+	1    5700 4650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 4350 5450 4200
+Text Label 7250 3500 2    50   ~ 0
+~CTRL5
+$Comp
+L Connector_Generic:Conn_01x03 J5
+U 1 1 5C2309D2
+P 4250 3900
+F 0 "J5" H 4250 4250 50  0000 C CNN
+F 1 "RELAY_5" H 4250 4150 50  0000 C CNN
+F 2 "" H 4250 3900 50  0001 C CNN
+F 3 "~" H 4250 3900 50  0001 C CNN
+	1    4250 3900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3450 5050 3600
+Wire Wire Line
+	4950 4300 4950 4200
+Wire Wire Line
+	5150 4400 5150 4200
+Text Label 5450 3250 0    50   ~ 0
+JD-VCC
+Text Label 6050 4950 2    50   ~ 0
+EXT_PWR-
+Wire Wire Line
+	6050 4950 5600 4950
+Wire Wire Line
+	4750 3450 4750 3900
+Wire Wire Line
+	4750 3450 5050 3450
+Wire Wire Line
+	4650 3800 4650 4300
+Wire Wire Line
+	4650 4300 4950 4300
+Wire Wire Line
+	4550 4400 4550 4000
+Wire Wire Line
+	4550 4400 5150 4400
+Wire Wire Line
+	4550 4000 4450 4000
+Wire Wire Line
+	4450 3900 4750 3900
+Wire Wire Line
+	4650 3800 4450 3800
+Wire Wire Line
+	5450 3600 5450 3500
+Wire Wire Line
+	5750 3750 5750 3500
+Wire Wire Line
+	5750 4050 5750 4350
+Wire Wire Line
+	5450 4350 5600 4350
+Wire Wire Line
+	5600 4450 5600 4350
+Connection ~ 5600 4350
+Wire Wire Line
+	5600 4350 5750 4350
+Wire Wire Line
+	5600 4850 5600 4950
+Wire Wire Line
+	6050 4650 5900 4650
+Wire Wire Line
+	6350 4650 6450 4650
+Wire Wire Line
+	6450 4650 6450 4250
+Wire Wire Line
+	6250 4250 6250 4350
+Wire Wire Line
+	6250 4350 6050 4350
+Wire Wire Line
+	6050 4350 6050 3500
+Wire Wire Line
+	6250 3050 6250 3200
+Wire Wire Line
+	6250 3500 6250 3650
+Wire Wire Line
+	7250 3500 6900 3500
+Wire Wire Line
+	6600 3500 6450 3500
+Wire Wire Line
+	6450 3500 6450 3650
+Wire Wire Line
+	6050 3500 5750 3500
+Connection ~ 5750 3500
+Wire Wire Line
+	5450 3500 5750 3500
+Wire Wire Line
+	5450 3250 5750 3250
+Wire Wire Line
+	5750 3250 5750 3500
+Text Label 5850 3050 0    50   ~ 0
+EXT_PWR+
+Wire Wire Line
+	5850 3050 6250 3050
+$Comp
+L Device:LED D12
+U 1 1 5C230A01
+P 6750 5650
+F 0 "D12" H 6743 5395 50  0000 C CNN
+F 1 "LED" H 6743 5486 50  0000 C CNN
+F 2 "" H 6750 5650 50  0001 C CNN
+F 3 "~" H 6750 5650 50  0001 C CNN
+	1    6750 5650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_SolidState:TLP3542 U6
+U 1 1 5C230A07
+P 6350 6100
+F 0 "U6" V 6304 5920 50  0000 R CNN
+F 1 "OPTO_ISOLATOR" V 6395 5920 50  0000 R CNN
+F 2 "Package_DIP:DIP-5-6_W7.62mm" H 6350 5800 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=1284&prodName=TLP3542" H 6350 6100 50  0001 C CNN
+	1    6350 6100
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K6
+U 1 1 5C230A0D
+P 5250 6050
+F 0 "K6" H 5350 5950 50  0000 R CNN
+F 1 "5VDC_Relay_6" H 5550 5550 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 5700 6000 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 5250 6050 50  0001 C CNN
+	1    5250 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5C230A13
+P 6250 5500
+F 0 "R12" H 6320 5546 50  0000 L CNN
+F 1 "1k" H 6320 5455 50  0000 L CNN
+F 2 "" V 6180 5500 50  0001 C CNN
+F 3 "~" H 6250 5500 50  0001 C CNN
+	1    6250 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D9
+U 1 1 5C230A19
+P 5750 6050
+F 0 "D9" V 5704 6129 50  0000 L CNN
+F 1 "D" V 5795 6129 50  0000 L CNN
+F 2 "" H 5750 6050 50  0001 C CNN
+F 3 "~" H 5750 6050 50  0001 C CNN
+	1    5750 6050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5C230A1F
+P 6200 6800
+F 0 "R9" V 5993 6800 50  0000 C CNN
+F 1 "510" V 6084 6800 50  0000 C CNN
+F 2 "" V 6130 6800 50  0001 C CNN
+F 3 "~" H 6200 6800 50  0001 C CNN
+	1    6200 6800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q6
+U 1 1 5C230A25
+P 5700 6800
+F 0 "Q6" H 5891 6800 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 5891 6755 50  0001 L CNN
+F 2 "" H 5900 6900 50  0001 C CNN
+F 3 "~" H 5700 6800 50  0001 C CNN
+	1    5700 6800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 6500 5450 6350
+Text Label 7250 5650 2    50   ~ 0
+~CTRL6
+$Comp
+L Connector_Generic:Conn_01x03 J6
+U 1 1 5C230A2D
+P 4250 6050
+F 0 "J6" H 4250 6400 50  0000 C CNN
+F 1 "RELAY_6" H 4250 6300 50  0000 C CNN
+F 2 "" H 4250 6050 50  0001 C CNN
+F 3 "~" H 4250 6050 50  0001 C CNN
+	1    4250 6050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5600 5050 5750
+Wire Wire Line
+	4950 6450 4950 6350
+Wire Wire Line
+	5150 6550 5150 6350
+Text Label 5450 5400 0    50   ~ 0
+JD-VCC
+Text Label 6050 7100 2    50   ~ 0
+EXT_PWR-
+Wire Wire Line
+	6050 7100 5600 7100
+Wire Wire Line
+	4750 5600 4750 6050
+Wire Wire Line
+	4750 5600 5050 5600
+Wire Wire Line
+	4650 5950 4650 6450
+Wire Wire Line
+	4650 6450 4950 6450
+Wire Wire Line
+	4550 6550 4550 6150
+Wire Wire Line
+	4550 6550 5150 6550
+Wire Wire Line
+	4550 6150 4450 6150
+Wire Wire Line
+	4450 6050 4750 6050
+Wire Wire Line
+	4650 5950 4450 5950
+Wire Wire Line
+	5450 5750 5450 5650
+Wire Wire Line
+	5750 5900 5750 5650
+Wire Wire Line
+	5750 6200 5750 6500
+Wire Wire Line
+	5450 6500 5600 6500
+Wire Wire Line
+	5600 6600 5600 6500
+Connection ~ 5600 6500
+Wire Wire Line
+	5600 6500 5750 6500
+Wire Wire Line
+	5600 7000 5600 7100
+Wire Wire Line
+	6050 6800 5900 6800
+Wire Wire Line
+	6350 6800 6450 6800
+Wire Wire Line
+	6450 6800 6450 6400
+Wire Wire Line
+	6250 6400 6250 6500
+Wire Wire Line
+	6250 6500 6050 6500
+Wire Wire Line
+	6050 6500 6050 5650
+Wire Wire Line
+	6250 5200 6250 5350
+Wire Wire Line
+	6250 5650 6250 5800
+Wire Wire Line
+	7250 5650 6900 5650
+Wire Wire Line
+	6600 5650 6450 5650
+Wire Wire Line
+	6450 5650 6450 5800
+Wire Wire Line
+	6050 5650 5750 5650
+Connection ~ 5750 5650
+Wire Wire Line
+	5450 5650 5750 5650
+Wire Wire Line
+	5450 5400 5750 5400
+Wire Wire Line
+	5750 5400 5750 5650
+Text Label 5850 5200 0    50   ~ 0
+EXT_PWR+
+Wire Wire Line
+	5850 5200 6250 5200
+$Comp
+L Device:LED D15
+U 1 1 5C2605B8
+P 10150 1350
+F 0 "D15" H 10143 1095 50  0000 C CNN
+F 1 "LED" H 10143 1186 50  0000 C CNN
+F 2 "" H 10150 1350 50  0001 C CNN
+F 3 "~" H 10150 1350 50  0001 C CNN
+	1    10150 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_SolidState:TLP3542 U7
+U 1 1 5C2605BE
+P 9750 1800
+F 0 "U7" V 9704 1620 50  0000 R CNN
+F 1 "OPTO_ISOLATOR" V 9795 1620 50  0000 R CNN
+F 2 "Package_DIP:DIP-5-6_W7.62mm" H 9750 1500 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=1284&prodName=TLP3542" H 9750 1800 50  0001 C CNN
+	1    9750 1800
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K7
+U 1 1 5C2605C4
+P 8650 1750
+F 0 "K7" H 8750 1650 50  0000 R CNN
+F 1 "5VDC_Relay_7" H 8950 1250 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 9100 1700 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 8650 1750 50  0001 C CNN
+	1    8650 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5C2605CA
+P 9650 1200
+F 0 "R15" H 9720 1246 50  0000 L CNN
+F 1 "1k" H 9720 1155 50  0000 L CNN
+F 2 "" V 9580 1200 50  0001 C CNN
+F 3 "~" H 9650 1200 50  0001 C CNN
+	1    9650 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D13
+U 1 1 5C2605D0
+P 9150 1750
+F 0 "D13" V 9104 1829 50  0000 L CNN
+F 1 "D" V 9195 1829 50  0000 L CNN
+F 2 "" H 9150 1750 50  0001 C CNN
+F 3 "~" H 9150 1750 50  0001 C CNN
+	1    9150 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5C2605D6
+P 9600 2500
+F 0 "R13" V 9393 2500 50  0000 C CNN
+F 1 "510" V 9484 2500 50  0000 C CNN
+F 2 "" V 9530 2500 50  0001 C CNN
+F 3 "~" H 9600 2500 50  0001 C CNN
+	1    9600 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q7
+U 1 1 5C2605DC
+P 9100 2500
+F 0 "Q7" H 9291 2500 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 9291 2455 50  0001 L CNN
+F 2 "" H 9300 2600 50  0001 C CNN
+F 3 "~" H 9100 2500 50  0001 C CNN
+	1    9100 2500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 2200 8850 2050
+Text Label 10650 1350 2    50   ~ 0
+~CTRL7
+$Comp
+L Connector_Generic:Conn_01x03 J7
+U 1 1 5C2605E4
+P 7650 1750
+F 0 "J7" H 7650 2100 50  0000 C CNN
+F 1 "RELAY_7" H 7650 2000 50  0000 C CNN
+F 2 "" H 7650 1750 50  0001 C CNN
+F 3 "~" H 7650 1750 50  0001 C CNN
+	1    7650 1750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 1300 8450 1450
+Wire Wire Line
+	8350 2150 8350 2050
+Wire Wire Line
+	8550 2250 8550 2050
+Text Label 8850 1100 0    50   ~ 0
+JD-VCC
+Text Label 9450 2800 2    50   ~ 0
+EXT_PWR-
+Wire Wire Line
+	9450 2800 9000 2800
+Wire Wire Line
+	8150 1300 8150 1750
+Wire Wire Line
+	8150 1300 8450 1300
+Wire Wire Line
+	8050 1650 8050 2150
+Wire Wire Line
+	8050 2150 8350 2150
+Wire Wire Line
+	7950 2250 7950 1850
+Wire Wire Line
+	7950 2250 8550 2250
+Wire Wire Line
+	7950 1850 7850 1850
+Wire Wire Line
+	7850 1750 8150 1750
+Wire Wire Line
+	8050 1650 7850 1650
+Wire Wire Line
+	8850 1450 8850 1350
+Wire Wire Line
+	9150 1600 9150 1350
+Wire Wire Line
+	9150 1900 9150 2200
+Wire Wire Line
+	8850 2200 9000 2200
+Wire Wire Line
+	9000 2300 9000 2200
+Connection ~ 9000 2200
+Wire Wire Line
+	9000 2200 9150 2200
+Wire Wire Line
+	9000 2700 9000 2800
+Wire Wire Line
+	9450 2500 9300 2500
+Wire Wire Line
+	9750 2500 9850 2500
+Wire Wire Line
+	9850 2500 9850 2100
+Wire Wire Line
+	9650 2100 9650 2200
+Wire Wire Line
+	9650 2200 9450 2200
+Wire Wire Line
+	9450 2200 9450 1350
+Wire Wire Line
+	9650 900  9650 1050
+Wire Wire Line
+	9650 1350 9650 1500
+Wire Wire Line
+	10650 1350 10300 1350
+Wire Wire Line
+	10000 1350 9850 1350
+Wire Wire Line
+	9850 1350 9850 1500
+Wire Wire Line
+	9450 1350 9150 1350
+Connection ~ 9150 1350
+Wire Wire Line
+	8850 1350 9150 1350
+Wire Wire Line
+	8850 1100 9150 1100
+Wire Wire Line
+	9150 1100 9150 1350
+Text Label 9250 900  0    50   ~ 0
+EXT_PWR+
+Wire Wire Line
+	9250 900  9650 900 
+$Comp
+L Device:LED D16
+U 1 1 5C260613
+P 10150 3500
+F 0 "D16" H 10143 3245 50  0000 C CNN
+F 1 "LED" H 10143 3336 50  0000 C CNN
+F 2 "" H 10150 3500 50  0001 C CNN
+F 3 "~" H 10150 3500 50  0001 C CNN
+	1    10150 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_SolidState:TLP3542 U8
+U 1 1 5C260619
+P 9750 3950
+F 0 "U8" V 9704 3770 50  0000 R CNN
+F 1 "OPTO_ISOLATOR" V 9795 3770 50  0000 R CNN
+F 2 "Package_DIP:DIP-5-6_W7.62mm" H 9750 3650 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=1284&prodName=TLP3542" H 9750 3950 50  0001 C CNN
+	1    9750 3950
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K8
+U 1 1 5C26061F
+P 8650 3900
+F 0 "K8" H 8750 3800 50  0000 R CNN
+F 1 "5VDC_Relay_8" H 8950 3400 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 9100 3850 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 8650 3900 50  0001 C CNN
+	1    8650 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5C260625
+P 9650 3350
+F 0 "R16" H 9720 3396 50  0000 L CNN
+F 1 "1k" H 9720 3305 50  0000 L CNN
+F 2 "" V 9580 3350 50  0001 C CNN
+F 3 "~" H 9650 3350 50  0001 C CNN
+	1    9650 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D14
+U 1 1 5C26062B
+P 9150 3900
+F 0 "D14" V 9104 3979 50  0000 L CNN
+F 1 "D" V 9195 3979 50  0000 L CNN
+F 2 "" H 9150 3900 50  0001 C CNN
+F 3 "~" H 9150 3900 50  0001 C CNN
+	1    9150 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 5C260631
+P 9600 4650
+F 0 "R14" V 9393 4650 50  0000 C CNN
+F 1 "510" V 9484 4650 50  0000 C CNN
+F 2 "" V 9530 4650 50  0001 C CNN
+F 3 "~" H 9600 4650 50  0001 C CNN
+	1    9600 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q8
+U 1 1 5C260637
+P 9100 4650
+F 0 "Q8" H 9291 4650 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 9291 4605 50  0001 L CNN
+F 2 "" H 9300 4750 50  0001 C CNN
+F 3 "~" H 9100 4650 50  0001 C CNN
+	1    9100 4650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 4350 8850 4200
+Text Label 10650 3500 2    50   ~ 0
+~CTRL8
+$Comp
+L Connector_Generic:Conn_01x03 J8
+U 1 1 5C26063F
+P 7650 3900
+F 0 "J8" H 7650 4250 50  0000 C CNN
+F 1 "RELAY_8" H 7650 4150 50  0000 C CNN
+F 2 "" H 7650 3900 50  0001 C CNN
+F 3 "~" H 7650 3900 50  0001 C CNN
+	1    7650 3900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3450 8450 3600
+Wire Wire Line
+	8350 4300 8350 4200
+Wire Wire Line
+	8550 4400 8550 4200
+Text Label 8850 3250 0    50   ~ 0
+JD-VCC
+Text Label 9450 4950 2    50   ~ 0
+EXT_PWR-
+Wire Wire Line
+	9450 4950 9000 4950
+Wire Wire Line
+	8150 3450 8150 3900
+Wire Wire Line
+	8150 3450 8450 3450
+Wire Wire Line
+	8050 3800 8050 4300
+Wire Wire Line
+	8050 4300 8350 4300
+Wire Wire Line
+	7950 4400 7950 4000
+Wire Wire Line
+	7950 4400 8550 4400
+Wire Wire Line
+	7950 4000 7850 4000
+Wire Wire Line
+	7850 3900 8150 3900
+Wire Wire Line
+	8050 3800 7850 3800
+Wire Wire Line
+	8850 3600 8850 3500
+Wire Wire Line
+	9150 3750 9150 3500
+Wire Wire Line
+	9150 4050 9150 4350
+Wire Wire Line
+	8850 4350 9000 4350
+Wire Wire Line
+	9000 4450 9000 4350
+Connection ~ 9000 4350
+Wire Wire Line
+	9000 4350 9150 4350
+Wire Wire Line
+	9000 4850 9000 4950
+Wire Wire Line
+	9450 4650 9300 4650
+Wire Wire Line
+	9750 4650 9850 4650
+Wire Wire Line
+	9850 4650 9850 4250
+Wire Wire Line
+	9650 4250 9650 4350
+Wire Wire Line
+	9650 4350 9450 4350
+Wire Wire Line
+	9450 4350 9450 3500
+Wire Wire Line
+	9650 3050 9650 3200
+Wire Wire Line
+	9650 3500 9650 3650
+Wire Wire Line
+	10650 3500 10300 3500
+Wire Wire Line
+	10000 3500 9850 3500
+Wire Wire Line
+	9850 3500 9850 3650
+Wire Wire Line
+	9450 3500 9150 3500
+Connection ~ 9150 3500
+Wire Wire Line
+	8850 3500 9150 3500
+Wire Wire Line
+	8850 3250 9150 3250
+Wire Wire Line
+	9150 3250 9150 3500
+Text Label 9250 3050 0    50   ~ 0
+EXT_PWR+
+Wire Wire Line
+	9250 3050 9650 3050
+Text Label 8400 5250 3    50   ~ 0
+~CTRL2
+Wire Wire Line
+	8400 5250 8400 5800
+Text Label 8500 5250 3    50   ~ 0
+~CTRL3
+Wire Wire Line
+	8500 5250 8500 5800
+Text Label 8600 5250 3    50   ~ 0
+~CTRL4
+Wire Wire Line
+	8600 5250 8600 5800
+Text Label 8700 5250 3    50   ~ 0
+~CTRL5
+Wire Wire Line
+	8700 5250 8700 5800
+Text Label 8800 5250 3    50   ~ 0
+~CTRL6
+Wire Wire Line
+	8800 5250 8800 5800
+Text Label 8900 5250 3    50   ~ 0
+~CTRL7
+Wire Wire Line
+	8900 5250 8900 5800
+Text Label 9000 5250 3    50   ~ 0
+~CTRL8
+Wire Wire Line
+	9000 5250 9000 5800
+Wire Wire Line
+	9900 5800 10400 5800
+Wire Wire Line
+	10400 5650 10000 5650
+$EndSCHEMATC

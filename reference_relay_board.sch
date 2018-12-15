@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:reference_relay_board-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -124,17 +125,6 @@ Wire Wire Line
 	1550 2150 1550 2050
 Wire Wire Line
 	1750 2250 1750 2050
-$Comp
-L Connector_Generic:Conn_01x03 J10
-U 1 1 5C166E3E
-P 9900 5300
-F 0 "J10" V 9864 5112 50  0000 R CNN
-F 1 "Power Select" V 9773 5112 50  0000 R CNN
-F 2 "" H 9900 5300 50  0001 C CNN
-F 3 "~" H 9900 5300 50  0001 C CNN
-	1    9900 5300
-	0    -1   -1   0   
-$EndComp
 Text Label 9550 5650 2    50   ~ 0
 EXT_PWR+
 Wire Wire Line
@@ -147,22 +137,16 @@ Wire Wire Line
 	7750 5650 8200 5650
 Text Label 8300 5250 3    50   ~ 0
 ~CTRL1
-Wire Wire Line
-	8300 5250 8300 5800
-Text Label 10400 5800 2    50   ~ 0
+Text Label 10400 5750 2    50   ~ 0
 EXT_PWR+
-Wire Wire Line
-	9900 5800 9900 5500
 Text Label 10400 5650 2    50   ~ 0
 JD-VCC
 Wire Wire Line
 	10000 5650 10000 5500
-Text Label 10400 5950 2    50   ~ 0
+Text Label 10400 5850 2    50   ~ 0
 EXT_PWR-
 Wire Wire Line
-	10400 5950 9800 5950
-Wire Wire Line
-	9800 5950 9800 5500
+	10400 5850 9800 5850
 Text Label 2050 1100 0    50   ~ 0
 JD-VCC
 Text Label 2650 2800 2    50   ~ 0
@@ -1443,34 +1427,51 @@ Wire Wire Line
 	9250 3050 9650 3050
 Text Label 8400 5250 3    50   ~ 0
 ~CTRL2
-Wire Wire Line
-	8400 5250 8400 5800
 Text Label 8500 5250 3    50   ~ 0
 ~CTRL3
-Wire Wire Line
-	8500 5250 8500 5800
 Text Label 8600 5250 3    50   ~ 0
 ~CTRL4
-Wire Wire Line
-	8600 5250 8600 5800
 Text Label 8700 5250 3    50   ~ 0
 ~CTRL5
-Wire Wire Line
-	8700 5250 8700 5800
 Text Label 8800 5250 3    50   ~ 0
 ~CTRL6
-Wire Wire Line
-	8800 5250 8800 5800
 Text Label 8900 5250 3    50   ~ 0
 ~CTRL7
-Wire Wire Line
-	8900 5250 8900 5800
 Text Label 9000 5250 3    50   ~ 0
 ~CTRL8
 Wire Wire Line
-	9000 5250 9000 5800
-Wire Wire Line
-	9900 5800 10400 5800
+	9900 5750 10400 5750
 Wire Wire Line
 	10400 5650 10000 5650
+Wire Wire Line
+	9000 5250 9000 5800
+Wire Wire Line
+	8900 5250 8900 5800
+Wire Wire Line
+	8800 5250 8800 5800
+Wire Wire Line
+	8700 5250 8700 5800
+Wire Wire Line
+	8600 5250 8600 5800
+Wire Wire Line
+	8500 5250 8500 5800
+Wire Wire Line
+	8400 5250 8400 5800
+Wire Wire Line
+	8300 5250 8300 5800
+Wire Wire Line
+	9800 5850 9800 5500
+$Comp
+L Connector_Generic:Conn_01x03 J10
+U 1 1 5C166E3E
+P 9900 5300
+F 0 "J10" V 9864 5112 50  0000 R CNN
+F 1 "PowerSelect" V 9773 5112 50  0000 R CNN
+F 2 "" H 9900 5300 50  0001 C CNN
+F 3 "~" H 9900 5300 50  0001 C CNN
+	1    9900 5300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9900 5500 9900 5750
 $EndSCHEMATC
